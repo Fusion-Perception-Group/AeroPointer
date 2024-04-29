@@ -1,6 +1,0 @@
-[submodule "component/Display-DirectY"]
-	path = component/Display-DirectY
-	url = https://github.com/Fusion-Perception-Group/Display-DirectY.git
-[submodule "component/SenseGlove"]
-	path = component/SenseGlove
-	url = https://github.com/Fusion-Perception-Group/SenseGlove.git
