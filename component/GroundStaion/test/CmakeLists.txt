@@ -1,0 +1,31 @@
+cmake_minimum_required(VERSION 3.15)
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED OFF)
+
+project(APTest)
+
+add_compile_definitions(DEBUG)
+
+# Add the executable for your main.cpp file
+add_executable(APTest main.cpp)
+
+# Include the directories containing your header files
+include_directories(lib/Base/include lib/Aeropointer/include)
+
+# Add the source files for your libraries
+set(BASE_SOURCES
+    lib/Base/Quaternion.cpp
+    lib/Base/Pose.cpp
+    lib/Base/Trajectory.cpp
+)
+
+set(AEROPOINTER_SOURCES
+    lib/Aeropointer/Aeropointer.cpp
+)
+
+# Create libraries for the modules
+add_library(Base STATIC ${BASE_SOURCES})
+add_library(Aeropointer STATIC ${AEROPOINTER_SOURCES})
+
+# Link the libraries to the main executable
+target_link_libraries(APTest Base Aeropointer)
