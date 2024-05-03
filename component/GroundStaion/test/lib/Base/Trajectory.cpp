@@ -1,13 +1,25 @@
 #include <Trajectory.hpp>
 
-void trajectory::addData(const Pose &pose) {
+void trajectory::addPose(const Pose &pose) {
 	if (poses.size() == maxSize) {
 		poses.pop_front();
 	}
 	poses.push_back(pose);
 }
 
-trajectory &trajectory::operator+=(const Pose &pose) {
-	addData(pose);
-	return *this;
+// async trajectory &trajectory::operator+=(const Pose &pose) {
+// 	if (poses.size() == maxSize) {
+// 		poses.pop_front();
+// 	}
+// 	poses.push_back(pose);
+
+// 	return *this;
+// }
+
+async void trajectory::saveToFile(const std::string &filename){
+	std::ofstream file;
+	file.open(filename);
+	for (auto &pose : poses) {
+		file << pose.x << " " << pose.y << " " << pose.z << " " << pose.roll << " " << pose.yaw << " " << pose.pitch << std::endl;
+	}
 }

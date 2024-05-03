@@ -7,10 +7,8 @@ struct trajectory {
 	std::deque<Pose> poses;
 	size_t maxSize; // MaxSize of Buffer
 
-	// add Pose record to buffer
-	void addData(const Pose &pose);
-
-	// add Pose record to buffer with '+='
+	void addPose(const Pose &pose);
 	trajectory &operator+=(const Pose &pose);
+	void saveToFile(const std::string &filename);
 };
 #endif // !TRAJECTORY_H
