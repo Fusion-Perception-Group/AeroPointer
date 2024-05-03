@@ -2,7 +2,7 @@
 
 int main(int argc, const char **argv) {
 	Copter copter;
-    copter.PrintPose();
+    copter.printPose();
 
     return 0 ;
 }
