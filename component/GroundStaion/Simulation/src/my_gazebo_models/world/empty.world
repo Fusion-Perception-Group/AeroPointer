@@ -1,0 +1,28 @@
+<?xml version="0.9" ?>
+<sdf version="1.7">
+  <world name="white_ground_world">
+    <model name="ground">
+      <pose>0 0 0 0 0 0</pose>
+      <link name="link">
+        <collision>
+          <geometry>
+            <box size="10 10 0.1"/>
+          </geometry>
+        </collision>
+        <visual>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <emissive>0 0 0 1</emissive>
+            <transparency>0</transparency>
+            <texture filename="" type="none"/>
+          </material>
+          <geometry>
+            <box size="10 10 0.1"/>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+  </world>
+</sdf>

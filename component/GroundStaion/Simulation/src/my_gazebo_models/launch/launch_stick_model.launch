@@ -1,0 +1,19 @@
+<launch>
+  <!-- Include Gazebo world -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find gazebo_ros)/worlds/empty.world"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+
+  <!-- Spawn the stick model -->
+  <!-- <node name="spawn_model" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+        args="-file $(find my_gazebo_models)/models/stick_model/model.sdf -sdf -model stick_model"/> -->
+
+  <node name="spawn_model" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+        args="-file $(find my_gazebo_models)/models/visual_sphere_model/visual_sphere.sdf -sdf -model visual_sphere"/>
+
+</launch>
