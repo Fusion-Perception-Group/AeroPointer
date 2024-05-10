@@ -10,10 +10,10 @@
   </include>
 
   <!-- Spawn the stick model -->
-  <!-- <node name="spawn_model" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
-        args="-file $(find my_gazebo_models)/models/stick_model/model.sdf -sdf -model stick_model"/> -->
-
   <node name="spawn_model" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
-        args="-file $(find my_gazebo_models)/models/visual_sphere_model/visual_sphere.sdf -sdf -model visual_sphere"/>
+        args="-file $(find my_gazebo_models)/models/stick_model/model.sdf -sdf -model stick_model"/>
+
+  <!-- <node name="spawn_model" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+        args="-file $(find my_gazebo_models)/models/visual_sphere_model/visual_sphere.sdf -sdf -model visual_sphere"/> -->
 
 </launch>

@@ -52,7 +52,7 @@ def on_shutdown():
 
 # 主函数
 if __name__ == "__main__":
-    rospy.init_node("ap_actuator")  # 初始化节点
+    rospy.init_node("aeropointer/actuator")  # 初始化节点
     rate = rospy.Rate(20)  # 设置运行频率为20Hz
 
     #######################################################################

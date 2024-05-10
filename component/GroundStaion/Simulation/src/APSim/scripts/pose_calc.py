@@ -7,7 +7,7 @@ import os
 
 class IntersectionCalculator:
     def __init__(self):
-        rospy.init_node('Pose_Calc')
+        rospy.init_node('aeropointer/pose_calc')
         self.sub = rospy.Subscriber('/glove/quaternion', Quaternion, self.quaternion_callback)
         self.pub = rospy.Publisher('/myPose', Pose, queue_size=10)
         self.radius = 5  # Radius of the virtual sphere
@@ -51,7 +51,7 @@ class IntersectionCalculator:
         pose_msg = Pose()
         pose_msg.position.x = intersection_point[0]
         pose_msg.position.y = intersection_point[1]
-        pose_msg.position.z = intersection_point[2]
+        pose_msg.position.z = intersection_point[2] + 1.75 #1.75是手套位置，没有传递进来。
         self.pub.publish(pose_msg)
         # Print the intersection point
         os.system('clear')

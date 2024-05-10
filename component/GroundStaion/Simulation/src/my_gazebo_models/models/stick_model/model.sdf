@@ -34,17 +34,17 @@
       </visual>
 
       <!-- 末端为蓝色小球 -->
-      <visual name="end_ball">
-        <pose>0 0 0.5 0 0 0</pose>
-        <geometry>
-          <sphere>
-            <radius>0.05</radius>
-          </sphere>
-        </geometry>
-        <material>
-          <ambient>0 0 1 1</ambient> <!-- 蓝色 -->
-        </material>
-      </visual>
+        <!-- <visual name="end_ball">
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <sphere>
+              <radius>0.05</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0 0 1 1</ambient> 
+          </material>
+        </visual> -->
 
     </link>
   </model>
