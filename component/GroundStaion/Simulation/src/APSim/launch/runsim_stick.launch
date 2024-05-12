@@ -1,0 +1,16 @@
+<launch>
+    <!-- Launching PX4 SITL with MAVROS -->
+    <include file="$(find my_gazebo_models)/launch/launch_stick_model.launch"/>
+
+    <!-- Running the senseglove_vector.py script -->
+    <node name="senseglove_vector" pkg="APSim" type="senseglove_vector.py" output="screen"/>
+
+    <!-- Running the new_pose_calc.py script -->
+    <node name="pose_calc" pkg="APSim" type="pose_calc.py" output="screen"/>
+
+    <!-- Running the new_glove_model_listener.py script -->
+    <node name="glove_model_listener" pkg="APSim" type="glove_model_listener.py" output="screen"/>
+
+    
+    <!-- <node name="actuator" pkg="APSim" type="actuator.py" output="screen"/> -->
+</launch>
