@@ -6,7 +6,7 @@
     <node name="senseglove_vector" pkg="APSim" type="senseglove_vector.py" output="screen"/>
 
     <!-- Running the new_pose_calc.py script -->
-    <node name="pose_calc" pkg="APSim" type="pose_calc.py" output="screen"/>
+    <node name="pose_calc" pkg="APSim" type="itsc_calc.py" output="screen"/>
 
     <!-- Running the new_glove_model_listener.py script -->
     <node name="glove_model_listener" pkg="APSim" type="glove_model_listener.py" output="screen"/>

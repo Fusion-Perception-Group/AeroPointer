@@ -34,7 +34,7 @@ class SenseGlove:
 
     def update_vector_data(self):
         #测试用，增加减少
-        self.updateIncrement(True,False)
+        self.updateIncrement(True,True)
         magnitude = math.sqrt(sum(x**2 for x in self.vector))
         self.normalized_vector = tuple(x / magnitude for x in self.vector)  # Normalizing the vector
 
