@@ -1,5 +1,5 @@
 <launch>
-    <!-- Launching PX4 SITL with MAVROS -->
+    <!-- Launching PX4 SITL with MAVROS, this file contains my model -->
     <include file="$(find px4)/launch/mavros_posix_sitl.launch"/>
 
     <!-- Running the senseglove_vector.py script -->
