@@ -49,17 +49,18 @@ def on_shutdown():
         ifSaid = True
         rospy.loginfo("offboard python Node Closing, Vehicle landing")
         rospy.loginfo("~Goodbye~")
+        exit
 
 # 主函数
 if __name__ == "__main__":
-    rospy.init_node("aeropointer/actuator")  # 初始化节点
+    rospy.init_node("actuator")  # 初始化节点
     rate = rospy.Rate(20)  # 设置运行频率为20Hz
 
     #######################################################################
     # 服务和话题初始化
     #######################################################################
     state_sub = rospy.Subscriber("mavros/state", State, callback=state_cb)
-    get_pose = rospy.Subscriber("/myPose", Pose, callback=myPose_callback, queue_size=20)
+    get_pose = rospy.Subscriber("/ap/intersection", Pose, callback=myPose_callback, queue_size=20)
     local_pose_sub = rospy.Subscriber("mavros/local_position/pose", PoseStamped, queue_size=10)
     set_pos_pub = rospy.Publisher("mavros/setpoint_position/local", PoseStamped, queue_size=10)
 
@@ -87,11 +88,11 @@ if __name__ == "__main__":
     disarm_cmd = CommandBoolRequest(value=True)
 
     while not rospy.is_shutdown():
-        # 检测是否需要降落,-0.1表示降落
-        if pose.pose.position.z == -0.1:
-            set_mode_client.call(land_mode)
-            arming_client.call(disarm_cmd)
-            break
+        # # 检测是否需要降落,-0.1表示降落
+        # if pose.pose.position.z == -0.1:
+        #     set_mode_client.call(land_mode)
+        #     arming_client.call(disarm_cmd)
+        #     break
 
         # 发布目标位置
         rospy.loginfo("SENT NEW POSE")

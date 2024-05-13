@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <model name="IntersectionBall">
+    <static>true</static> <!-- 直接设置为true即可 -->
+    <link name="ball_link">
+      <visual name="ball_visual">
+        <pose>0 0 0 0 0 0</pose> <!-- 设置球体的位置 -->
+        <geometry>
+          <sphere>
+            <radius>0.2</radius> <!-- 球体的半径 -->
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0 1 1 0.5</ambient> <!-- 调整透明度为0.5的蓝色材料 -->
+          <diffuse>0 1 1 0.5</diffuse> <!-- 同样应用于diffuse以保持一致的视觉效果 -->
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
