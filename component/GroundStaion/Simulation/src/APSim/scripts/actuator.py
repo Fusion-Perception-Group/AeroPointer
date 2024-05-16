@@ -60,7 +60,7 @@ if __name__ == "__main__":
     # 服务和话题初始化
     #######################################################################
     state_sub = rospy.Subscriber("mavros/state", State, callback=state_cb)
-    get_pose = rospy.Subscriber("/ap/intersection", Pose, callback=myPose_callback, queue_size=20)
+    get_pose = rospy.Subscriber("/ap/_pose_cmd", Pose, callback=myPose_callback, queue_size=20)
     local_pose_sub = rospy.Subscriber("mavros/local_position/pose", PoseStamped, queue_size=10)
     set_pos_pub = rospy.Publisher("mavros/setpoint_position/local", PoseStamped, queue_size=10)
 
