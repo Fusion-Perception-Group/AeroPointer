@@ -1,0 +1,22 @@
+WARNING: Package name "APSim" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+WARNING: Package name "APSim" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+In file included from [01m[K/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/src/avoidance/global_planner/include/global_planner/global_planner.h:27[m[K,
+                 from [01m[K/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/src/avoidance/global_planner/src/library/global_planner.cpp:1[m[K:
+[01m[K/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/src/avoidance/global_planner/include/global_planner/search_tools.h:[m[K In function ‘[01m[Kbool global_planner::reverseSearch(GlobalPlanner*, const global_planner::Cell&)[m[K’:
+[01m[K/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/src/avoidance/global_planner/include/global_planner/search_tools.h:262:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  262 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+In file included from [01m[K/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/src/avoidance/global_planner/include/global_planner/global_planner.h:27[m[K,
+                 from [01m[K/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/src/avoidance/global_planner/include/global_planner/global_planner_node.h:32[m[K,
+                 from [01m[K/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/src/avoidance/global_planner/src/nodes/global_planner_node.cpp:1[m[K:
+[01m[K/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/src/avoidance/global_planner/include/global_planner/search_tools.h:[m[K In function ‘[01m[Kbool global_planner::reverseSearch(GlobalPlanner*, const global_planner::Cell&)[m[K’:
+[01m[K/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/src/avoidance/global_planner/include/global_planner/search_tools.h:262:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  262 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+In file included from [01m[K/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/src/avoidance/global_planner/include/global_planner/global_planner.h:27[m[K,
+                 from [01m[K/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/src/avoidance/global_planner/include/global_planner/global_planner_node.h:32[m[K,
+                 from [01m[K/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/src/avoidance/global_planner/src/nodes/global_planner_node_main.cpp:1[m[K:
+[01m[K/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/src/avoidance/global_planner/include/global_planner/search_tools.h:[m[K In function ‘[01m[Kbool global_planner::reverseSearch(GlobalPlanner*, const global_planner::Cell&)[m[K’:
+[01m[K/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/src/avoidance/global_planner/include/global_planner/search_tools.h:262:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  262 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K

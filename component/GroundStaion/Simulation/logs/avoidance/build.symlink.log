@@ -1,0 +1,4 @@
+Symlinking /home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/lib/libavoidance.so
+Symlinking /home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/lib/pkgconfig/avoidance.pc
+Symlinking /home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/share/avoidance/cmake/avoidanceConfig.cmake
+Symlinking /home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/share/avoidance/cmake/avoidanceConfig-version.cmake

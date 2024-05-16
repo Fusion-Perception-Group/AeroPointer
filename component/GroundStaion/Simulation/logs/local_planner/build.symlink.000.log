@@ -1,0 +1,13 @@
+Symlinking /home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/lib/liblocal_planner_nodelet.so
+Symlinking /home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/lib/liblocal_planner.so
+Symlinking /home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/lib/pkgconfig/local_planner.pc
+Symlinking /home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/lib/local_planner/local_planner_node
+Symlinking /home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/lib/python3/dist-packages/local_planner/__init__.py
+Symlinking /home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/lib/python3/dist-packages/local_planner/cfg/LocalPlannerNodeConfig.py
+Symlinking /home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/lib/python3/dist-packages/local_planner/cfg/__init__.py
+Symlinking /home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/share/local_planner/docs/LocalPlannerNodeConfig.dox
+Symlinking /home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/share/local_planner/docs/LocalPlannerNodeConfig-usage.dox
+Symlinking /home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/share/local_planner/docs/LocalPlannerNodeConfig.wikidoc
+Symlinking /home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/share/local_planner/cmake/local_plannerConfig-version.cmake
+Symlinking /home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/share/local_planner/cmake/local_plannerConfig.cmake
+Symlinking /home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/include/local_planner/LocalPlannerNodeConfig.h

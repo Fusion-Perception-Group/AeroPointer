@@ -3,9 +3,13 @@
 
 import rospy
 import math
+import os
 from geometry_msgs.msg import PoseStamped, Pose, Point, Quaternion
 from mavros_msgs.msg import State
 from mavros_msgs.srv import CommandBool, CommandBoolRequest, SetMode, SetModeRequest
+
+Spawn_X = 0.73
+Spawn_Y = 0.88
 
 current_state = State()  # 当前无人机状态
 global ifSaid
@@ -17,8 +21,9 @@ ifSaid = False  # 是否已发送着陆信息标志
 global pose
 pose = PoseStamped(
     pose=Pose(
-        position=Point(0, 0, 1),
-        orientation=Quaternion(0, 0, math.sin(math.pi / 4), math.sin(math.pi / 4))
+        position=Point(0.6 - Spawn_X, 1.2 - Spawn_Y, 1),
+        # orientation=Quaternion(0, 0, math.sin(math.pi / 4), math.sin(math.pi / 4)) #y轴方向，北方
+        orientation=Quaternion(0, 0, 0, 1) # 默认x轴方向，东方
     )
 )
 
@@ -28,13 +33,17 @@ def state_cb(msg):
     current_state = msg
 
 # 回调函数：接收目标位置并更新
-# pose:PoseStamped类型对象
-# msg:Pose类型对象
+# pose: PoseStamped类型对象
+# msg: Pose类型对象
 def myPose_callback(msg):
     global pose
-    if msg is not None and pose.pose != msg:
-        pose.pose = msg
-        # rospy.logwarn("POSE CHANGED:\n %s" % pose)
+    if msg is not None:
+        # 直接更新pose对象，减去Spawn_X和Spawn_Y
+        pose.pose.position.x = msg.position.x - Spawn_X
+        pose.pose.position.y = msg.position.y - Spawn_Y
+        pose.pose.position.z = msg.position.z  # z坐标保持不变
+        pose.pose.orientation = msg.orientation  # 姿态保持不变
+
         rospy.logwarn("POSE CHANGED")
 
 # 程序关闭时的处理函数
@@ -60,7 +69,7 @@ if __name__ == "__main__":
     # 服务和话题初始化
     #######################################################################
     state_sub = rospy.Subscriber("mavros/state", State, callback=state_cb)
-    get_pose = rospy.Subscriber("/ap/intersection", Pose, callback=myPose_callback, queue_size=20)
+    get_pose = rospy.Subscriber("/myPose", Pose, callback=myPose_callback, queue_size=20)
     local_pose_sub = rospy.Subscriber("mavros/local_position/pose", PoseStamped, queue_size=10)
     set_pos_pub = rospy.Publisher("mavros/setpoint_position/local", PoseStamped, queue_size=10)
 
@@ -95,7 +104,8 @@ if __name__ == "__main__":
         #     break
 
         # 发布目标位置
-        rospy.loginfo("SENT NEW POSE")
+        os.system('clear')
+        rospy.loginfo("state: {}\nSENT NEW POSE: {}".format(current_state.mode, pose))
         set_pos_pub.publish(pose)
         MsgCounter += 1
 

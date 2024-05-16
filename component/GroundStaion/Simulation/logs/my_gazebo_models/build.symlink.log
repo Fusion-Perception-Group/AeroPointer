@@ -1,0 +1,4 @@
+Symlinking /home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/lib/my_gazebo_models/key_control
+Symlinking /home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/lib/pkgconfig/my_gazebo_models.pc
+Symlinking /home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/share/my_gazebo_models/cmake/my_gazebo_modelsConfig-version.cmake
+Symlinking /home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/share/my_gazebo_models/cmake/my_gazebo_modelsConfig.cmake

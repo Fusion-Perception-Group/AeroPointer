@@ -1,0 +1,6 @@
+avoidance/avoidance
+/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/.private/avoidance/cmake.lock /home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/./cmake.lock
+/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/.private/avoidance/lib/libavoidance.so /home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/lib/libavoidance.so
+/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/.private/avoidance/lib/pkgconfig/avoidance.pc /home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/lib/pkgconfig/avoidance.pc
+/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/.private/avoidance/share/avoidance/cmake/avoidanceConfig.cmake /home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/share/avoidance/cmake/avoidanceConfig.cmake
+/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/.private/avoidance/share/avoidance/cmake/avoidanceConfig-version.cmake /home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/share/avoidance/cmake/avoidanceConfig-version.cmake

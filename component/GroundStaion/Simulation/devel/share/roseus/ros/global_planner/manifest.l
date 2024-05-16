@@ -1,0 +1,1 @@
+/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/.private/global_planner/share/roseus/ros/global_planner/manifest.l

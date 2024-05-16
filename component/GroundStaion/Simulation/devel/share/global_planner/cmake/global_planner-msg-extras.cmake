@@ -1,0 +1,1 @@
+/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/.private/global_planner/share/global_planner/cmake/global_planner-msg-extras.cmake

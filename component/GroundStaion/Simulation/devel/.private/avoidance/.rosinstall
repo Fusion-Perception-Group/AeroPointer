@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/.private/avoidance/setup.sh

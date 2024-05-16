@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="blue_transparent_cylinder">
+    <static>true</static>
+    <pose>3.75 3.12 1.5 0 0 0</pose>
+    <link name="link">
+      <visual name="visual">
+        <geometry>
+          <cylinder>
+            <radius>0.15</radius>
+            <length>3.0</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Blue</name>
+          </script>
+          <ambient>0 0 1 0.5</ambient> <!-- Blue, semi-transparent -->
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

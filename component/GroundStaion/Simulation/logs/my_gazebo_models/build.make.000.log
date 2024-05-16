@@ -1,0 +1,4 @@
+[35m[1mScanning dependencies of target key_control[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/key_control.dir/src/key_control.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/.private/my_gazebo_models/lib/my_gazebo_models/key_control[0m
+[100%] Built target key_control

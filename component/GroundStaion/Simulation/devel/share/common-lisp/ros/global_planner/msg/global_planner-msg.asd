@@ -1,0 +1,1 @@
+/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/.private/global_planner/share/common-lisp/ros/global_planner/msg/global_planner-msg.asd
