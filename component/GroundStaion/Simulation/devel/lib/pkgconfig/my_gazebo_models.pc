@@ -1,8 +1,0 @@
-prefix=/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel
-
-Name: my_gazebo_models
-Description: Description of my_gazebo_models
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
