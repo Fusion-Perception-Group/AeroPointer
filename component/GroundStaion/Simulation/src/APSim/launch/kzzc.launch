@@ -1,0 +1,12 @@
+<launch>
+    <!-- Launch Gazebo with a specified world file -->
+    <arg name="world_file" default="/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/src/my_gazebo_models/world/kzzc.world" />
+
+    <!-- We include the gazebo_ros launch file, which will start Gazebo -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(arg world_file)" />
+    </include>
+
+    <!-- Spawn the custom model into Gazebo -->
+    <node name="spawn_cylinder_model" pkg="gazebo_ros" type="spawn_model" args="-file /home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/src/my_gazebo_models/models/cylinder.sdf -sdf -model blue_transparent_cylinder" respawn="false" output="screen" />
+</launch>

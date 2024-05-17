@@ -3,7 +3,12 @@
 Desktop.ini
 
 **/build/
+**/devel/
+**/.catkin_tools
+**/logs
+
 **/.vscode/
+
 
 .vscode
 # Thumbnail cache files
