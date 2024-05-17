@@ -2,7 +2,8 @@
 .DS_Store
 Desktop.ini
 
-**/build/
+**/build
+**/devel
 **/.vscode/
 
 .vscode

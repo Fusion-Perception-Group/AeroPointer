@@ -1,1 +1,0 @@
-/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/.private/safe_landing_planner/share/gennodejs/ros/safe_landing_planner/_index.js

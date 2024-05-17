@@ -1,1 +1,0 @@
-/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/.private/global_planner/lib/python3/dist-packages/global_planner/msg/__init__.py

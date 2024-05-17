@@ -1,1 +1,8 @@
-/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/.private/APSim/lib/pkgconfig/APSim.pc
+prefix=/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel
+
+Name: APSim
+Description: Description of APSim
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

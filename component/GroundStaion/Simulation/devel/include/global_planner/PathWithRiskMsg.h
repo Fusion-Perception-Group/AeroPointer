@@ -1,1 +1,0 @@
-/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/.private/global_planner/include/global_planner/PathWithRiskMsg.h

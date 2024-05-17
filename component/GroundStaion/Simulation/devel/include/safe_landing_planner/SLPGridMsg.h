@@ -1,1 +1,0 @@
-/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/.private/safe_landing_planner/include/safe_landing_planner/SLPGridMsg.h

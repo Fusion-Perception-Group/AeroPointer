@@ -1,1 +1,8 @@
-/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/.private/safe_landing_planner/lib/pkgconfig/safe_landing_planner.pc
+prefix=/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel
+
+Name: safe_landing_planner
+Description: Description of safe_landing_planner
+Version: 0.0.0
+Cflags: -I/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/include -I/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/src/avoidance/safe_landing_planner/include
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy std_msgs mavros_msgs geometry_msgs mav_msgs sensor_msgs message_runtime tf message_runtime avoidance
