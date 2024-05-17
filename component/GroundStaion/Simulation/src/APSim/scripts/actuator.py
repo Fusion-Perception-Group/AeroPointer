@@ -8,8 +8,8 @@ from geometry_msgs.msg import PoseStamped, Pose, Point, Quaternion
 from mavros_msgs.msg import State
 from mavros_msgs.srv import CommandBool, CommandBoolRequest, SetMode, SetModeRequest
 
-Spawn_X = 0.73
-Spawn_Y = 0.88
+# Spawn_X = 0.725
+# Spawn_Y = 0.885
 
 current_state = State()  # 当前无人机状态
 global ifSaid
@@ -21,7 +21,7 @@ ifSaid = False  # 是否已发送着陆信息标志
 global pose
 pose = PoseStamped(
     pose=Pose(
-        position=Point(0.6 - Spawn_X, 1.2 - Spawn_Y, 1),
+        position=Point(0, 0, 0.5),
         # orientation=Quaternion(0, 0, math.sin(math.pi / 4), math.sin(math.pi / 4)) #y轴方向，北方
         orientation=Quaternion(0, 0, 0, 1) # 默认x轴方向，东方
     )
@@ -39,11 +39,13 @@ def myPose_callback(msg):
     global pose
     if msg is not None:
         # 直接更新pose对象，减去Spawn_X和Spawn_Y
-        pose.pose.position.x = msg.position.x - Spawn_X
-        pose.pose.position.y = msg.position.y - Spawn_Y
-        pose.pose.position.z = msg.position.z  # z坐标保持不变
-        pose.pose.orientation = msg.orientation  # 姿态保持不变
-
+        # pose.pose.position.x = msg.position.x - Spawn_X
+        # pose.pose.position.y = msg.position.y - Spawn_Y
+        # pose.pose.position.x = msg.position.x
+        # pose.pose.position.y = msg.position.y
+        # pose.pose.position.z = msg.position.z  # z坐标保持不变
+        # pose.pose.orientation = msg.orientation  # 姿态保持不变
+        pose.pose = msg
         rospy.logwarn("POSE CHANGED")
 
 # 程序关闭时的处理函数
@@ -98,10 +100,10 @@ if __name__ == "__main__":
 
     while not rospy.is_shutdown():
         # # 检测是否需要降落,-0.1表示降落
-        # if pose.pose.position.z == -0.1:
-        #     set_mode_client.call(land_mode)
-        #     arming_client.call(disarm_cmd)
-        #     break
+        if pose.pose.position.z == -0.1:
+            set_mode_client.call(land_mode)
+            arming_client.call(disarm_cmd)
+            break
 
         # 发布目标位置
         os.system('clear')

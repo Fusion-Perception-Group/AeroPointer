@@ -3,7 +3,7 @@
     <!-- 基础坐标系，用于关联激光扫描数据和机器人的位置 -->
     <param name="base_frame" value="base_link"/>
     <!-- 里程计坐标系，用于提供机器人的运动信息 -->
-    <param name="odom_frame" value="odom"/>
+    <param name="odom_frame" value="mavros/local_position/odom"/>
     <!-- 地图更新间隔，单位为秒 -->
     <param name="map_update_interval" value="0.2"/>
     <!-- 激光雷达的最大有效测量范围 -->

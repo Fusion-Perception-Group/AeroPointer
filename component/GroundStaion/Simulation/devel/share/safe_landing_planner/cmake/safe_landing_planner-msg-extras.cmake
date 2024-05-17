@@ -1,1 +1,2 @@
-/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/devel/.private/safe_landing_planner/share/safe_landing_planner/cmake/safe_landing_planner-msg-extras.cmake
+set(safe_landing_planner_MESSAGE_FILES "/home/groove/QuadCopter/AeroPointer/component/GroundStaion/Simulation/src/avoidance/safe_landing_planner/msg/SLPGridMsg.msg")
+set(safe_landing_planner_SERVICE_FILES "")
