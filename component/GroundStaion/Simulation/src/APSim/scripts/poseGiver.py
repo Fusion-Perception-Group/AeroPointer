@@ -67,6 +67,12 @@ def main():
 
     height = 0.5
     poses = [#12
+            # Point1: (1.483, 0.175)
+            # Point2: (3.163, 0.179)
+            # Point3: (2.902, 1.643)
+            # Point4: (1.472, 2.424)
+            # Point5: (1.515, 2.995)
+            # Point6: (2.761, 3.007)
         Pose(Point(0, 0, 1), Quaternion(0, 0, 0, 1)),
         Pose(Point(1.19, -0.100, height), Quaternion(0, 0, 0, 1)),
         Pose(Point(1.19, 0.525, height), Quaternion(0, 0, 0, 1)),
