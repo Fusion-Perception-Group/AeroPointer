@@ -7,8 +7,8 @@ import numpy as np
 master = mavutil.mavlink_connection('/dev/tty.usbmodem01', baud=115200)
 
 # 等待接收飞控的心跳消息
-master.wait_heartbeat()
-print("Heartbeat from system (system %u component %u)\n\n" % (master.target_system, master.target_component))
+# master.wait_heartbeat()
+# print("Heartbeat from system (system %u component %u)\n\n" % (master.target_system, master.target_component))
 
 # 发送心跳消息
 master.mav.heartbeat_send(
@@ -52,17 +52,17 @@ while True:
     # for _ in range(10):  # 每秒发送十次
     #     send_vision_position_estimate()
     #     time.sleep(0.1)  # 0.1秒间隔
-    send_vision_position_estimate()
+    # send_vision_position_estimate()
 
     # 无时间间隔地读取接收到的MAVLink消息
     while (time.time() - start_time) < 0.1:
         msg = master.recv_match(blocking=False)
         if msg:
-            # print(msg.get_type())
+            print(msg.get_type())
             # 检查是否为视觉相关的数据
-            if msg.get_type() == 'VISION_POSITION_ESTIMATE':
+            if msg.get_type() == 'LOCAL_POSITION_NED':
                 print(f"Received VISION_POSITION_ESTIMATE: {msg}\n")
-            elif msg.get_type() == 'VISION_POSITION_DELTA':
-                print(f"Received VISION_POSITION_DELTA: {msg}\n")
-            elif msg.get_type() == 'VISION_SPEED_ESTIMATE':
-                print(f"Received VISION_SPEED_ESTIMATE: {msg}\n")
+            # elif msg.get_type() == 'VISION_POSITION_DELTA':
+            #     print(f"Received VISION_POSITION_DELTA: {msg}\n")
+            # elif msg.get_type() == 'VISION_SPEED_ESTIMATE':
+            #     print(f"Received VISION_SPEED_ESTIMATE: {msg}\n")

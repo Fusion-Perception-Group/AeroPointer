@@ -13,6 +13,7 @@ class SerialToPose:
 
     def parse_data(self, data):
         try:
+            print(data)
             if "no solution" in data:
                 print("No solution found in the data.")
                 return None
@@ -45,5 +46,5 @@ class SerialToPose:
 
 if __name__ == '__main__':
     # 注意：更改端口为适合你的系统的端口
-    converter = SerialToPose(port='/dev/cu.usbserial-120')  # 修改为你的实际串口设备名
+    converter = SerialToPose(port='/dev/cu.usbserial-111230')  # 修改为你的实际串口设备名
     converter.run()
